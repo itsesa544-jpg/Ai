@@ -1,0 +1,7 @@
+{
+  "name": "Astra AI",
+  "description": "A next-generation AI platform powered by Gemini, featuring advanced natural language processing and image generation capabilities wrapped in a stunning UI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
