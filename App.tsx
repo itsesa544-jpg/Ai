@@ -21,7 +21,7 @@ function App() {
                 <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-                Astra AI
+                অ্যাস্ট্রা এআই
               </span>
             </div>
             
@@ -34,7 +34,7 @@ function App() {
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
                 }`}
               >
-                Chat
+                চ্যাট
               </button>
               <button 
                 onClick={() => setCurrentView('image')}
@@ -44,7 +44,7 @@ function App() {
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
                 }`}
               >
-                Image
+                ছবি
               </button>
             </div>
           </div>
@@ -76,7 +76,7 @@ function App() {
       {currentView === 'home' && (
         <footer className="bg-slate-900 border-t border-slate-800 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-sm">
-            <p>&copy; {new Date().getFullYear()} Astra AI. Powered by Google Gemini.</p>
+            <p>&copy; {new Date().getFullYear()} অ্যাস্ট্রা এআই। গুগল জেমিনি দ্বারা চালিত।</p>
           </div>
         </footer>
       )}

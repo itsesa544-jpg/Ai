@@ -19,7 +19,7 @@ export const generateTextResponse = async (
     // to keep the demo lightweight and robust.
     
     const prompt = `
-      You are Astra, a helpful and intelligent AI assistant.
+      You are Astra, a helpful and intelligent AI assistant. You can speak Bengali fluently and are helpful to users speaking Bengali.
       
       Conversation History:
       ${history.map(h => `${h.role === 'user' ? 'User' : 'Model'}: ${h.text}`).join('\n')}
@@ -33,7 +33,7 @@ export const generateTextResponse = async (
       contents: prompt,
     });
 
-    return response.text || "I couldn't generate a response.";
+    return response.text || "আমি কোনো উত্তর তৈরি করতে পারিনি।";
   } catch (error) {
     console.error("Gemini Text Gen Error:", error);
     throw new Error("Failed to generate response. Please try again.");

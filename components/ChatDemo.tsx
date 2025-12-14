@@ -13,7 +13,7 @@ export const ChatDemo: React.FC<ChatDemoProps> = ({ onBack }) => {
     {
       id: '1',
       role: 'model',
-      text: "Hi! I'm Astra. How can I help you today?",
+      text: "নমস্কার! আমি অ্যাস্ট্রা। আজ আমি আপনাকে কীভাবে সাহায্য করতে পারি?",
       timestamp: new Date()
     }
   ]);
@@ -58,7 +58,7 @@ export const ChatDemo: React.FC<ChatDemoProps> = ({ onBack }) => {
       setMessages(prev => [...prev, {
         id: (Date.now() + 1).toString(),
         role: 'model',
-        text: "Sorry, I encountered an error. Please try again.",
+        text: "দুঃখিত, একটি ত্রুটি হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
         timestamp: new Date(),
       }]);
       setStatus(APIStatus.ERROR);
@@ -81,7 +81,7 @@ export const ChatDemo: React.FC<ChatDemoProps> = ({ onBack }) => {
         >
           <ArrowLeft className="w-6 h-6" />
         </button>
-        <h2 className="text-2xl font-bold text-white">Chat with Astra</h2>
+        <h2 className="text-2xl font-bold text-white">অ্যাস্ট্রার সাথে কথা বলুন</h2>
       </div>
 
       <div className="flex-1 overflow-y-auto glass-panel rounded-2xl p-4 md:p-6 mb-4 space-y-6">
@@ -118,7 +118,7 @@ export const ChatDemo: React.FC<ChatDemoProps> = ({ onBack }) => {
                </div>
                <div className="p-4 rounded-2xl bg-slate-700/50 rounded-tl-none border border-slate-600 flex items-center">
                  <Loader2 className="w-5 h-5 text-slate-400 animate-spin mr-2" />
-                 <span className="text-slate-400 text-sm">Thinking...</span>
+                 <span className="text-slate-400 text-sm">ভাবছি...</span>
                </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ export const ChatDemo: React.FC<ChatDemoProps> = ({ onBack }) => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Type your message here..."
+          placeholder="আপনার বার্তা এখানে লিখুন..."
           className="w-full bg-slate-800 text-white rounded-xl pl-6 pr-14 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-700 placeholder-slate-500"
         />
         <button

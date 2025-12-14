@@ -37,7 +37,7 @@ export const ImageGenDemo: React.FC<ImageGenDemoProps> = ({ onBack }) => {
         >
           <ArrowLeft className="w-6 h-6" />
         </button>
-        <h2 className="text-2xl font-bold text-white">AI Image Studio</h2>
+        <h2 className="text-2xl font-bold text-white">এআই ইমেজ স্টুডিও</h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -45,12 +45,12 @@ export const ImageGenDemo: React.FC<ImageGenDemoProps> = ({ onBack }) => {
         <div className="space-y-6">
           <div className="glass-panel p-6 rounded-2xl border border-slate-700">
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              Describe your imagination
+              আপনার কল্পনার বর্ণনা দিন
             </label>
             <textarea
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
-              placeholder="A futuristic city with flying cars at sunset, cyberpunk style..."
+              placeholder="সূর্যাস্তে উড়ন্ত গাড়ি সহ একটি ফিউচারিস্টিক শহর, সাইবারপাঙ্ক স্টাইল..."
               className="w-full h-32 bg-slate-900/50 text-white rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-slate-600 resize-none mb-4 placeholder-slate-500"
             />
             
@@ -62,31 +62,31 @@ export const ImageGenDemo: React.FC<ImageGenDemoProps> = ({ onBack }) => {
               {status === APIStatus.LOADING ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin mr-2" />
-                  Dreaming...
+                  তৈরি হচ্ছে...
                 </>
               ) : (
                 <>
                   <Sparkles className="w-5 h-5 mr-2" />
-                  Generate Art
+                  আর্ট তৈরি করুন
                 </>
               )}
             </button>
             {status === APIStatus.ERROR && (
-               <p className="text-red-400 text-sm mt-3 text-center">Failed to generate image. Try a different prompt.</p>
+               <p className="text-red-400 text-sm mt-3 text-center">ছবি তৈরি করতে ব্যর্থ হয়েছে। অন্য প্রম্পট চেষ্টা করুন।</p>
             )}
           </div>
 
           <div className="p-6 bg-slate-800/30 rounded-2xl border border-slate-700/50">
-            <h3 className="text-lg font-semibold text-white mb-4">Tips for better results</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">ভালো ফলাফলের জন্য টিপস</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li className="flex items-start">
-                <span className="text-purple-400 mr-2">•</span> Be specific about lighting (e.g., "cinematic lighting", "golden hour")
+                <span className="text-purple-400 mr-2">•</span> আলোর কথা নির্দিষ্ট করে বলুন (যেমন, "সিনেম্যাটিক লাইটিং")
               </li>
               <li className="flex items-start">
-                <span className="text-purple-400 mr-2">•</span> Mention the art style (e.g., "oil painting", "digital art", "photorealistic")
+                <span className="text-purple-400 mr-2">•</span> আর্ট স্টাইল উল্লেখ করুন (যেমন, "অয়েল পেইন্টিং", "ডিজিটাল আর্ট")
               </li>
               <li className="flex items-start">
-                <span className="text-purple-400 mr-2">•</span> Describe the mood (e.g., "eerie", "cheerful", "mysterious")
+                <span className="text-purple-400 mr-2">•</span> মুড বা পরিবেশ বর্ণনা করুন (যেমন, "রহস্যময়", "আনন্দদায়ক")
               </li>
             </ul>
           </div>
@@ -109,7 +109,7 @@ export const ImageGenDemo: React.FC<ImageGenDemoProps> = ({ onBack }) => {
                      className="px-6 py-3 bg-white text-slate-900 rounded-full font-bold flex items-center hover:scale-105 transition-transform"
                    >
                      <Download className="w-5 h-5 mr-2" />
-                     Download Image
+                     ছবি ডাউনলোড করুন
                    </a>
                 </div>
               </>
@@ -119,12 +119,12 @@ export const ImageGenDemo: React.FC<ImageGenDemoProps> = ({ onBack }) => {
                   <div className="absolute inset-0 rounded-full border-4 border-purple-500/30"></div>
                   <div className="absolute inset-0 rounded-full border-4 border-t-purple-500 animate-spin"></div>
                 </div>
-                <p className="text-slate-400 mt-4 animate-pulse">Creating your masterpiece...</p>
+                <p className="text-slate-400 mt-4 animate-pulse">আপনার মাস্টারপিস তৈরি হচ্ছে...</p>
               </div>
             ) : (
               <div className="flex flex-col items-center text-slate-500">
                 <ImageIcon className="w-16 h-16 mb-4 opacity-50" />
-                <p>Your creation will appear here</p>
+                <p>আপনার সৃষ্টি এখানে দেখা যাবে</p>
               </div>
             )}
           </div>
