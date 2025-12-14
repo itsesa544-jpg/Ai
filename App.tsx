@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { Hero } from './components/Hero';
 import { ChatDemo } from './components/ChatDemo';
 import { ImageGenDemo } from './components/ImageGenDemo';
+import { Intro } from './components/Intro';
 import { ViewState } from './types';
 
 function App() {
-  const [currentView, setCurrentView] = useState<ViewState>('home');
+  const [currentView, setCurrentView] = useState<ViewState>('intro');
+
+  if (currentView === 'intro') {
+    return <Intro onEnter={() => setCurrentView('home')} />;
+  }
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-50 selection:bg-purple-500/30">

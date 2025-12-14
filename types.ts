@@ -10,7 +10,7 @@ export interface ImageGenerationResult {
   prompt: string;
 }
 
-export type ViewState = 'home' | 'chat' | 'image';
+export type ViewState = 'intro' | 'home' | 'chat' | 'image';
 
 export enum APIStatus {
   IDLE = 'idle',

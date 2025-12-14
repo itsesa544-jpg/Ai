@@ -22,9 +22,9 @@ export const Hero: React.FC<HeroProps> = ({ onStartChat, onStartImage }) => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white space-y-2">
-          <span className="block">হ্যালো!</span>
+          <span className="block">হ্যালো</span>
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-            প্রথম পেজে স্বাগতম
+            স্বাগতম
           </span>
         </h1>
 
